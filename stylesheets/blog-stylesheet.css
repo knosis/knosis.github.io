@@ -31,9 +31,9 @@ header {
 
 main {
   left: 200px;
-  padding: 100px;
+  padding: 0 100px;
   max-width: 700px;
-  margin-top: 500px;
+  margin-top: 400px;
 }
 
 #container {
@@ -61,7 +61,7 @@ main {
   height: 30%;
   top: 0;
   left: 0;
-  background: url('https://raw.githubusercontent.com/knosis/knosis.github.io/master/images/coffee_cup.jpg') no-repeat left center scroll #fff;
+  background: url('https://raw.githubusercontent.com/knosis/knosis.github.io/master/images/coffee_cup.jpg') no-repeat left top scroll #fff;
   background-position: center;
   z-index: 100;
 }
