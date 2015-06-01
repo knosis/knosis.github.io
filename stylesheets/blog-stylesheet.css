@@ -24,10 +24,16 @@ article {
   padding: 15px;
 }
 
+header {
+  display: block;
+  height: auto;
+}
+
 main {
   left: 200px;
   padding: 100px;
   max-width: 700px;
+  margin-top: 500px;
 }
 
 #container {
@@ -55,11 +61,8 @@ main {
   height: 30%;
   top: 0;
   left: 0;
-  background: url('');
+  background: url('https://raw.githubusercontent.com/knosis/knosis.github.io/master/images/coffee_cup.jpg') no-repeat left center scroll #fff;
   background-position: center;
-  -webkit-box-shadow: inset -1px 0 0 rgba(0,0,0,0.3);
-  -moz-box-shadow: inset -1px 0 0 rgba(0,0,0,0.3);
-  box-shadow: inset -1px 0 0 rgba(0,0,0,0.3);
   z-index: 100;
 }
 
