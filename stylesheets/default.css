@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-size: 100%;
   line-height: 1.5;
-  background: url('images/zoetrope.jpg') #FFF cover fixed;
+  background: url('https://github.com/knosis/knosis.github.io/blob/master/images/zoetrope.jpg') #FFF cover fixed;
 }
 article, footer, header, nav, section {display: block;}
 h1, h2, h3, h4 {
