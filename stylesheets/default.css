@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-size: 100%;
   line-height: 1.5;
-  background: url('https://github.com/knosis/knosis.github.io/blob/master/images/zoetrope.jpg') #FFF cover fixed;
+  background: url('https://github.com/knosis/knosis.github.io/blob/master/images/zoetrope.jpg');
 }
 article, header, section {display: block;}
 h1, h2, h3, h4 {
@@ -18,7 +18,7 @@ h2 {font-size: 2em;}
 p, figure {
   margin: 1em 0;}
 a img {border: none;}
-
+a {text-decoration: none; border-bottom: none;}
 
 
 
@@ -56,12 +56,10 @@ a img {border: none;}
   height:10%;
 }
 
-.social li a {
+.social li {
     bottom: 0;
     float: left;
     height: 30%;
-    margin-left: -50%;
-    position: absolute;
     width: 100%;
     text-decoration: none;
     border-bottom: none;
