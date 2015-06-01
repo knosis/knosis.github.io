@@ -24,9 +24,6 @@ a img {border: none;}
 a {text-decoration: none; border-bottom: none; color: white;}
 li {list-style-type: none;}
 
-
-#main_image
-
 #nav {
   position: absolute;
   right: 30%;
@@ -50,8 +47,6 @@ li {list-style-type: none;}
   position: absolute;
   right: 30%;
 }
-
-.nav_text
 
 .social li {
   display: inline;
