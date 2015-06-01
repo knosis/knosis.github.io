@@ -19,7 +19,7 @@ p, figure {
   margin: 1em 0;}
 a img {border: none;}
 a {text-decoration: none; border-bottom: none;}
-
+li {list-style-type: none;}
 
 
 #main_image
@@ -31,7 +31,6 @@ a {text-decoration: none; border-bottom: none;}
   line-height:100%;
   width:35%;
   height:100%;
-  font-size:36px;"
 }
 
 #projects_img
@@ -45,7 +44,10 @@ a {text-decoration: none; border-bottom: none;}
   height:10%;
 }
 
-.nav
+#nav ul
+  position: absolute;
+  right: 30%;
+}
 
 .nav_text
 
@@ -63,7 +65,7 @@ a {text-decoration: none; border-bottom: none;}
     width: 100%;
     text-decoration: none;
     border-bottom: none;
-}
+  }
 
 .social {
   bottom:0px;
