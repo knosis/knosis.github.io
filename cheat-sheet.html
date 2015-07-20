@@ -323,8 +323,31 @@ var evens = randomNums.filter(isEven);
 <strong>Many to Many Link Tables</strong>
 <p>Tables used to join two tables in a many to many relationship is named using the table names they link, with the table names in alphabetical order, for example items_orders.</p>
 
+<p>Simple customers table</p>
+<pre><code>
+  CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(100)
+);
+  </pre></code>
+
+<p>Orders table with foreign key</p>
+<pre><code>
+  CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT,
+    amount DOUBLE,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+  </pre></code>
+
+  <pre><code>
+  SELECT state_name, region_id FROM state_data ORDER BY region_id ASC;
+
+  SELECT region_name FROM region_data WHERE region_name LIKE '%Central';
 
 
+  </pre></code>
 </main>
 </section>
   </body>
