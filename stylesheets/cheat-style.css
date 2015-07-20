@@ -8,7 +8,7 @@ body {
 article, aside, figcaption, figure, footer, header, nav, section {display: block;}
 h1, h2, h3, h4 {margin: 1em .5em; line-height: 1.25;}
 h1 {font-size: 2em;}
-h2 {font-size: 1.5em; border-bottom: solid; margin: 2em 0 1em 2em;}
+h2 {font-size: 1.5em; border-bottom: solid; margin: 2em 0 1em 2em; width: 90%;}
 h3 {font-size: 1.2em;}
 h4 {font-size: 1em;}
 ul, ol {margin: 1em 0; padding-left: 40px;}
@@ -16,13 +16,13 @@ p, figure {margin: 1em 2em;}
 a img {border: none; margin: 0 2em;}
 a  {margin: 0 2em;}
 sup, sub {line-height: 0;}
-section {float:right; padding: 10px; margin: 10px 15px; width: 30%}
+section {float:right; padding: 10px; margin: 10px 15px; width: 30%; min-width: 380px;}
 * {
   font-family: arial, sans-serif;
   font-size: 1em;
 }
 .container {
-  width: 1100px;
+  width: 100%;
   margin: 0 auto;
   position: static;
 }
