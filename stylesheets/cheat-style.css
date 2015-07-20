@@ -16,7 +16,7 @@ p, figure {margin: 1em 2em;}
 a img {border: none; margin: 0 2em;}
 a  {margin: 0 2em;}
 sup, sub {line-height: 0;}
-section {float:right; padding: 10px; margin: 10px 15px; width: 30%; min-width: 380px;}
+aside {float:right; padding: 10px; margin: 10px 15px; width: 30%; min-width: 380px;}
 * {
   font-family: arial, sans-serif;
   font-size: 1em;
@@ -24,7 +24,6 @@ section {float:right; padding: 10px; margin: 10px 15px; width: 30%; min-width: 3
 .container {
   width: 100%;
   margin: 0 auto;
-  position: static;
   min-width: 600px;
 }
 
