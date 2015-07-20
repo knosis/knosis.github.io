@@ -29,4 +29,4 @@ aside {float:right; padding: 10px; margin: 10px 15px; width: 30%; min-width: 380
 
 pre { padding-left: 40px;}
 
-main {width: 55%; margin: 50px; padding: 15px; position: relative;}
+main {width: 55%; margin: 50px; padding: 15px; position: relative; display: block;}
