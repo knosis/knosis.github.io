@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mixd Metaphors</title>
+    <link href="../stylesheets/blog-stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="../stylesheets/default.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div id="container">
+        <aside class="previous-articles">
+            <article>
+                <a href="https://knosis.github.io/blog/c5-feedback.html"><h2>Coding Feedback</h2></a>
+
+                <p>...</p>
+            </article>
+            <article>
+                <a href="https://knosis.github.io/blog/t5-ruby-classes.html"><h2>Ruby Classes</h2></a>
+
+                <p>...</p>
+            </article>
+            <article>
+                <a href="https://knosis.github.io/blog/t4-enumerable-methods.html"><h2>Enumerable Methods</h2></a>
+
+                <p>...</p>
+            </article>
+            <article>
+                <a href="https://knosis.github.io/blog/c3-thinking-style.html"><h2>Thinking Style</h2></a>
+
+                <p>...</p>
+            </article>
+            <article>
+                <a href="https://knosis.github.io/blog/t3-arrays-hashes.html"><h2>Hashes and Arrays</h2></a>
+
+                <p>...</p>
+            </article>
+            <article>
+                <a href="https://knosis.github.io/blog/t2-css-design.html"><h2>CSS Design</h2></a>
+
+                <p>...</p>
+            </article>
+            <article>
+                <a href="https://knosis.github.io/blog/c1-chefs-kitchen.html"><h2>Cooks in the Kitchen</h2></a>
+
+                <p>...</p>
+            </article>
+
+            <article>
+                <a href="https://knosis.github.io/blog/t1-git-blog.html"><h2>Version Control</h2>
+
+                <p>...</p>
+            </article>
+        </aside>
+
+        <div id="wrap-main">
+            <header>
+                <div class="cover-img"></div>
+
+                <h1 class="cover-title">Mixd Metaphors</h1>
+            </header>
+
+            <main>
+              <h1>Ruby Classes in Session</h1>
+              <h2>This is for beginners</h2>
+              <h4>June 20, 2015</h4>
+
+              <section>
+                <p>
+                 Ruby classes solve a simple problem. Why create something from scratch every time when you can create a template and modify it?
+                 A class is very much like a template. It makes you think about which parts of the template will stay the same and which parts will be modified in the future. What is the minimum you'll need to get started?
+                </p>
+                <p>Lets take this blog for example. There are certain parts of this blog which don't change much. If you look up top where the picture is, I'd say the header doesn't dance around from week to week. That footer is looking good just as it is. The most dynamic parts of this blog are the paragraphs of text and the links on the left which need to be updated. This is a pretty good example for creating a Ruby Blog class.
+                  </p>
+                <p>
+                    <pre>Class Blog</pre>
+                    <pre>def initialize(blog)<br>
+                    @header = header<br>
+                    @footer = footer<br>
+                    end</pre><br><br>
+
+                    <pre>def body_text<br>
+                        @body_text = text<br>
+                    end</pre><br><br>
+
+                    <pre>end</pre>
+                  </p>
+                <p>This example could be better but it helps to illustrate the point. You see we created a blog class and we initialized it with some necessary elements. With a little more work this kind of code might save us from having to copy/paste multiple times. When jobs get bigger, coders find creative ways to be lazier.</p>
+                  <!-- copy and paste as many sections as you want to add paragraphs -->
+                </section>
+            </main>
+        </div>
+
+
+        </div>
+        <!--<div id="footer">
+            <table class="tg">
+                <tr>
+                    <th class="tg-2uhc">
+                        <a href="/">Email</a>
+                    </th>
+
+                    <th class="tg-2uhc">
+                        <a href="https://github.com/knosis">GitHub</a>
+                    </th>
+
+                    <th class="tg-2uhc">
+                        <a href="https://twitter.com/entangld">Twitter</a>
+                    </th>
+                </tr>
+            </table>
+    </div>-->
+</body>
+</html>

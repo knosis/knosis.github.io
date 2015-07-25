@@ -1,0 +1,98 @@
+h1, h2, h3, h4 {
+  margin: 1em 0 .5em;
+  line-height: 1.25;
+  font-family: 'Lato', sans-serif;
+}
+
+a {text-decoration: none; border-bottom: none;}
+li {list-style-type: none;}
+
+aside {
+  float: left;
+  background-color: #333333;
+  height: 1200px;
+  width: 200px;
+}
+
+aside > article h2 {
+  color: white;
+  font-size: 1em;
+}
+
+article {
+  margin: 0 10px;
+  padding: 15px;
+}
+
+header {
+  display: block;
+  height: auto;
+}
+
+main {
+  left: 200px;
+  padding: 0 100px;
+  max-width: 700px;
+  margin-top: 400px;
+}
+
+#container {
+  height: 100%;
+}
+
+#wrap-main {
+    left: 200px;
+    position: absolute;
+    width: 700px;
+}
+.cover {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  max-width: 500px;
+}
+
+.cover-img {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  left: 0;
+  background: url('https://raw.githubusercontent.com/knosis/knosis.github.io/master/images/coffee_cup.jpg') no-repeat left top scroll #fff;
+  background-position: center;
+  z-index: 100;
+}
+
+.cover-title {
+  font-size: 32px;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 100;
+}
+
+
+.wrapper {
+  outline: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  left: 0px;
+  width: 100%;
+  margin: 20px 40px;
+  text-align: center;
+}

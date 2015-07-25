@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="stylesheets/cheat-style.css"/>
+<title>DBC Cheat Sheet</title>
+</head>
+  <body>
+  <h1>DBC Cheat Sheet</h1>
+<h2>RUBY</h2>
+
+    <section class="container">
+  <aside>
+    <h3>Ruby Tips</h3>
+    <ul>
+  <li>Use 2 space indent, no tabs.</li>
+  <li>    Use [] over Array.new.</li>
+  <li>    Use {} over Hash.new.</li>
+  <li>    Don’t rescue Exception. EVER. or I will stab you.</li>
+  <li>    Don’t call exit inside of a library method.</li>
+  <li>    Use whitespace more. In both directions.</li>
+  <li>    Use globals less.</li>
+  <li>    Use parens to disambiguate, otherwise avoid them.</li>
+  <li>    Learn to use Enumerable. You will not be a rubyist until you do.</li>
+  <li>    Returning different types is almost always a no-no.</li>
+  <li>    dontNameVarsCamelCase, use_readable_variables.</li>
+  <li>    Hungarian notation is for Other Languages, not Ruby.</li>
+  <li>    Separate ideas with blank lines, just like paragraphs.</li>
+  <li>    Align stuff to be cleaner and to optimize for human pattern matching.</li>
+  <li>    Don’t use == to compare floats. Also, learn floats.</li>
+</ul>
+  </aside>
+<main>
+
+
+<h3>Tips</h3>
+
+<a href="http://www.zenspider.com/Languages/Ruby/QuickRef.html#defining-a-class">Ruby Cheat Sheet</a>
+
+<h3>Methods</h3>
+<a href="http://overapi.com/ruby/">Ruby Method Cheat Sheet </a>
+<pre><code>
+    def create_hash
+      @hash_cipher = Hash.new()
+      ("a".."z").to_a.each_with_index do |elem, index|
+        @hash_cipher[@cipher[index]] = elem
+      end
+    end
+</pre></code>
+
+<h3>Control Expressions</h3>
+
+<h4>Ternary</h4>
+
+<code>bool-expr ? true-expr : false-expr</code>
+
+<h4>Case</h4>
+<pre><code>
+case target-expr
+when comparison [, comparison]... [then]
+  body
+when comparison [, comparison]... [then]
+  body
+# ...
+else # optional else
+  body
+end
+</pre></code>
+
+<h4>If Else Unless</h4>
+<pre><code>
+if bool-expr [then]
+  body
+elsif bool-expr [then]
+  body
+else
+  body
+end
+</pre></code>
+
+<pre><code>
+unless bool-expr [then]
+  body
+else
+  body
+end
+</pre></code>
+
+<h4>Loops</h4>
+
+<pre><code>
+loop do
+  body
+end
+</pre></code>
+
+<pre><code>
+while bool-expr [do]
+  body
+end
+</pre></code>
+
+<pre><code>
+until bool-expr [do]
+  body
+end
+</pre></code>
+
+<pre><code>
+begin
+  body
+end while bool-expr
+</pre></code>
+
+<pre><code>
+begin
+  body
+end until bool-expr
+</pre></code>
+
+<pre><code>
+for name [, name]... in expr [do]
+  body
+end
+</pre></code>
+
+<pre><code>
+expr.each do | name [, name]... | # preferred form over `for`
+  body
+end
+</pre></code>
+
+<h3>Ruby Naming Conventions</h3>
+
+<p><strong>Local Variables</strong><br>
+Lowercase letters e.g. <code>mileage, variable_xyz</code></p>
+
+<p><strong>Instance Variables</strong><br>
+Instance variables e.g. <code>@colour</code></p>
+
+<p><strong>Instance Methods</strong><br>
+Similar to local variables e.g. <code>close_the_door</code></p>
+
+<p><strong>Class Variables</strong><br>
+Class variable names e.g. <code>@@colour</code></p>
+
+<p><strong>Constant</strong><br>
+Constant names start with an uppercase letters e.g. <code>THIS_IS_A_CONSTANT</code></p>
+<br>
+<p><strong>Class and Module</strong><br>
+Class and module names use MixedCase, e.g.<code> module Encryption, class MixedCase </code></p>
+
+<p><strong>Global Variables</strong><br>
+Starts with a dollar ($) e.g. <code>$global</code></p>
+
+
+
+
+<h3>Classes</h3>
+
+<p>A class is a stamp that you can use to make objects that have the same attributes.</p>
+
+<p>For example every person has a name, age, height, etc.</p>
+
+
+<p>1. Setting up a new class<br>
+-------------------------<br>
+Class name are always uppercase</p>
+<pre><code>
+class Person
+  # This initialize method, is where you can pass in attributes when you make a copy of the class.
+  def initialize(name, age, location)
+    @name = name
+    @age = age
+    @location = location
+    # These instance methods can be used anywhere in the class.
+  end
+
+end
+</pre></code>
+
+<p> 2. Creating copies with our class.<br>
+ ---------------------------------</p>
+<pre><code>
+class Person
+
+#   attr_reader :name
+  # It makes the attribute visible outside of the class.
+
+  attr_writer :name
+  attr_reader :age
+
+  def initialize(name, age, location)
+    # This is turning the local variables into instance variables.
+    @name = name
+    @age = age
+    @location = location
+  end
+
+
+  def say_hello(persons_name)
+    # arguements get defined as local variable inside the method
+    # local vairables are ONLY visible inside this method.
+  end
+
+
+  # This is indentical to attr_reader.
+#   def name
+#     return @name
+#   end
+
+  # This is an instance method, it changes or returns the objects attributes in some way.
+
+  # Instance methods ARE visible / callable outside of the class by default.
+  def get_older
+#     @age += 1
+#   end
+
+</pre></code>
+
+
+<h3>Errors</h3>
+
+<pre><code>
+raise ExceptionClass[, "message"]
+
+begin
+  expr...
+[rescue [error_type [=> var],...]
+  expr...] ...
+[else
+  expr...]
+[ensure
+  expr...]
+end
+
+</pre></code>
+
+<h4>Glossary</h4>
+ArgumentError:
+---------------
+<p>This means you passed too few or too many arguments to a method
+
+<p>Arguments error 4 for 3
+<p>You passed 4, it only accepts 3
+
+<p>Arguments, 2 for 4
+<p>You passed 2 but it wanted 4
+
+
+<p>UndefinedMethod / NoMethodError
+-------------------------------
+<p>You tried calling a method that doesnt exist.</p>
+<p>If its one you made, theres probably a typo.</p>
+<p>If its a Ruby method, make sure your calling on the right object type.</p>
+
+
+
+<h2>JAVASCRIPT</h2>
+
+<h3>RegEx Help</h3>
+http://regexpal.com/
+
+<h3>Naming Conventions</h3>
+
+<p>
+<strong>Local Variables and Methods</strong><br>
+Camel case e.g. <code>variableName</code>, <code>function methodName()</code>
+</p>
+
+<p>
+<strong>Constants and Globals</strong><br>
+Constant and Global names are all uppercase letters e.g. <code>THIS_IS_A_CONSTANT</code>
+</p>
+
+<p>
+<strong>Constructors</strong><br>
+Constructor names use MixedCase, e.g. <code>function Encryption()</code>, <code>function MixedCase()</code>
+</p>
+
+<h3>Useful Method Examples</h3>
+
+<code><pre>
+var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+</pre></code>
+
+<h4>Map</h4>
+<code><pre>
+arr.map(function(element) {
+  return element * 2;
+});
+// => [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+</pre></code>
+<h4>Reduce</h4>
+<code><pre>
+arr.reduce(function(memo, element) {
+  return memo + element;
+});
+// => 45
+</pre></code>
+<h4>Filter</h4>
+<code><pre>
+arr.filter(function(element) {
+  return element % 2 === 0;
+});
+// => [0, 2, 4, 6, 8]
+
+function isEven(naturalNums) {
+  return (naturalNums % 2 === 0);
+}
+var evens = randomNums.filter(isEven);
+</pre></code>
+
+<h2>SQL</h2>
+
+<strong>Primary Key</strong>
+<p>The primary key of a table is assumed to be named id.</p>
+
+<p>The foreign key is named with the singular version of the target table name with _id appended to it, e.g. order_id in the items table where we have items linked to the orders table.</p>
+
+<strong>Many to Many Link Tables</strong>
+<p>Tables used to join two tables in a many to many relationship is named using the table names they link, with the table names in alphabetical order, for example items_orders.</p>
+
+<p>Simple customers table</p>
+<pre><code>
+  CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(100)
+);
+  </pre></code>
+
+<p>Orders table with foreign key</p>
+<pre><code>
+  CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT,
+    amount DOUBLE,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+  </pre></code>
+
+  <pre><code>
+  SELECT state_name, region_id FROM state_data ORDER BY region_id ASC;
+
+  SELECT region_name FROM region_data WHERE region_name LIKE '%Central';
+
+
+  </pre></code>
+</main>
+</section>
+  </body>
+</html>
